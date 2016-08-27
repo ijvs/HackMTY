@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class LoginViewController: UIViewController
 {
 
@@ -18,6 +20,11 @@ class LoginViewController: UIViewController
         super.viewDidLoad()
         
         self.loginButton.layer.cornerRadius = 7
+        self.loginButton.hidden = true
+        
+        let login = FBSDKLoginButton()
+        login.center = self.view.center
+        self.view.addSubview(login)
     }
 
 }
