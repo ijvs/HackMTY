@@ -71,10 +71,12 @@ class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAutho
             paymentRequest.currencyCode = "USD"
             paymentRequest.countryCode = "US"
             paymentRequest.merchantIdentifier = "merchant.space.siker.testpay"
+            paymentRequest.supportedNetworks = [PKPaymentNetworkAmex,PKPaymentNetworkVisa, PKPaymentNetworkMasterCard]
             paymentRequest.merchantCapabilities = .Capability3DS
             paymentRequest.requiredShippingAddressFields = .None
             paymentRequest.paymentSummaryItems = [PKPaymentSummaryItem(label: "Experiencia", amount: 1200.00)]
             var payController = PKPaymentAuthorizationViewController(paymentRequest: paymentRequest)
+            print(payController.description)
             payController.delegate = self
             self.presentViewController(payController, animated: true, completion: nil)
         }
