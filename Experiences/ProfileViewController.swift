@@ -55,7 +55,23 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         userName.textAlignment = .Center
         tableViewHeader.addSubview(userName)
         
+        let doneView = UIButton(type: .System)
+        doneView.frame = CGRect(x: tableViewHeader.frame.size.width - 60, y: 40, width: 50, height: 30)
+        doneView.setTitle("Done", forState: .Normal)
+        doneView.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        doneView.addTarget(self, action: #selector(doneViews), forControlEvents: .TouchUpInside)
+        tableViewHeader.addSubview(doneView)
+        
         self.view.addSubview(self.tableViewProfile)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
+    func doneViews()
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     //MARK: TableView Delegates
