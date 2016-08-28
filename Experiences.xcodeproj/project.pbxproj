@@ -14,6 +14,15 @@
 		076E05521D73325E005E1F5F /* HistoryScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E05511D73325E005E1F5F /* HistoryScene.swift */; };
 		076E05551D733368005E1F5F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E05531D733368005E1F5F /* Colors.swift */; };
 		076E05561D733368005E1F5F /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E05541D733368005E1F5F /* Bubble.swift */; };
+		076E05601D7337BA005E1F5F /* airplane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E05571D7337BA005E1F5F /* airplane@2x.png */; };
+		076E05611D7337BA005E1F5F /* card@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E05581D7337BA005E1F5F /* card@2x.png */; };
+		076E05621D7337BA005E1F5F /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E05591D7337BA005E1F5F /* star@2x.png */; };
+		076E05631D7337BA005E1F5F /* eagle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055A1D7337BA005E1F5F /* eagle@2x.png */; };
+		076E05641D7337BA005E1F5F /* smile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055B1D7337BA005E1F5F /* smile@2x.png */; };
+		076E05651D7337BA005E1F5F /* badge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055C1D7337BA005E1F5F /* badge@2x.png */; };
+		076E05661D7337BA005E1F5F /* natural@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055D1D7337BA005E1F5F /* natural@2x.png */; };
+		076E05671D7337BA005E1F5F /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055E1D7337BA005E1F5F /* next@2x.png */; };
+		076E05681D7337BA005E1F5F /* train@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055F1D7337BA005E1F5F /* train@2x.png */; };
 		07925A491D724CA500C951B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07925A481D724CA500C951B3 /* AppDelegate.swift */; };
 		07925A4E1D724CA500C951B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07925A4C1D724CA500C951B3 /* Main.storyboard */; };
 		07925A501D724CA500C951B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07925A4F1D724CA500C951B3 /* Assets.xcassets */; };
@@ -63,6 +72,15 @@
 		076E05511D73325E005E1F5F /* HistoryScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryScene.swift; sourceTree = "<group>"; };
 		076E05531D733368005E1F5F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		076E05541D733368005E1F5F /* Bubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bubble.swift; sourceTree = "<group>"; };
+		076E05571D7337BA005E1F5F /* airplane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airplane@2x.png"; sourceTree = "<group>"; };
+		076E05581D7337BA005E1F5F /* card@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card@2x.png"; sourceTree = "<group>"; };
+		076E05591D7337BA005E1F5F /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		076E055A1D7337BA005E1F5F /* eagle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eagle@2x.png"; sourceTree = "<group>"; };
+		076E055B1D7337BA005E1F5F /* smile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smile@2x.png"; sourceTree = "<group>"; };
+		076E055C1D7337BA005E1F5F /* badge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badge@2x.png"; sourceTree = "<group>"; };
+		076E055D1D7337BA005E1F5F /* natural@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "natural@2x.png"; sourceTree = "<group>"; };
+		076E055E1D7337BA005E1F5F /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
+		076E055F1D7337BA005E1F5F /* train@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "train@2x.png"; sourceTree = "<group>"; };
 		07925A451D724CA500C951B3 /* Experiences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experiences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07925A481D724CA500C951B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07925A4D1D724CA500C951B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +154,15 @@
 				076E05511D73325E005E1F5F /* HistoryScene.swift */,
 				076E05531D733368005E1F5F /* Colors.swift */,
 				076E05541D733368005E1F5F /* Bubble.swift */,
+				076E05571D7337BA005E1F5F /* airplane@2x.png */,
+				076E05581D7337BA005E1F5F /* card@2x.png */,
+				076E05591D7337BA005E1F5F /* star@2x.png */,
+				076E055A1D7337BA005E1F5F /* eagle@2x.png */,
+				076E055B1D7337BA005E1F5F /* smile@2x.png */,
+				076E055C1D7337BA005E1F5F /* badge@2x.png */,
+				076E055D1D7337BA005E1F5F /* natural@2x.png */,
+				076E055E1D7337BA005E1F5F /* next@2x.png */,
+				076E055F1D7337BA005E1F5F /* train@2x.png */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -379,17 +406,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076E05601D7337BA005E1F5F /* airplane@2x.png in Resources */,
 				076E054B1D72C09B005E1F5F /* myProfile@2x.png in Resources */,
 				0797449F1D72927500B66641 /* profile.JPG in Resources */,
+				076E05681D7337BA005E1F5F /* train@2x.png in Resources */,
 				0797449C1D728DEC00B66641 /* phone@2x.png in Resources */,
 				0797449D1D728DEC00B66641 /* friends@2x.png in Resources */,
 				076E054D1D73294F005E1F5F /* Travelers.jpg in Resources */,
+				076E05611D7337BA005E1F5F /* card@2x.png in Resources */,
+				076E05661D7337BA005E1F5F /* natural@2x.png in Resources */,
 				0797449B1D728DEC00B66641 /* shareLove@2x.png in Resources */,
+				076E05621D7337BA005E1F5F /* star@2x.png in Resources */,
 				0797449A1D728DEC00B66641 /* history@2x.png in Resources */,
+				076E05671D7337BA005E1F5F /* next@2x.png in Resources */,
+				076E05641D7337BA005E1F5F /* smile@2x.png in Resources */,
+				076E05631D7337BA005E1F5F /* eagle@2x.png in Resources */,
 				07925A531D724CA500C951B3 /* LaunchScreen.storyboard in Resources */,
 				ABAC862F1D729C52007D8BAE /* ExperienceCollectionCell.xib in Resources */,
 				07925A501D724CA500C951B3 /* Assets.xcassets in Resources */,
 				07925A4E1D724CA500C951B3 /* Main.storyboard in Resources */,
+				076E05651D7337BA005E1F5F /* badge@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
