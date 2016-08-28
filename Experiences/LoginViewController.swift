@@ -38,7 +38,7 @@ class LoginViewController: UIViewController
         FBSDKLoginManager().logInWithReadPermissions(["public_profile", "email", "user_friends"], fromViewController: self) { (result, error) in
             
             if error == nil{
-                FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, email, name, picture"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+                FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, email, name, picture.type(large)"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                     if error == nil{
                         let resultDict = result as! NSDictionary
                         print(resultDict)

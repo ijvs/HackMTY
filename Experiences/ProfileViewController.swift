@@ -23,19 +23,24 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableViewProfile.delegate = self
         self.tableViewProfile.dataSource = self
         
+        //Defaults
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
         //Table view header
         let tableViewHeader = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/2))
         self.tableViewProfile.tableHeaderView = tableViewHeader
         
         let profilePicture = UIImageView(frame: CGRect(x: tableViewHeader.frame.width/2 - 75, y: tableViewHeader.frame.size.height/2 - 75, width: 150, height: 150))
-        profilePicture.image = UIImage(named: "profile.JPG")
-        profilePicture.contentMode = .ScaleToFill
+        let urlPicture = NSURL(string: defaults.objectForKey("user_urlPicture") as! String)
+        let dataPicture = NSData(contentsOfURL: urlPicture!)
+        profilePicture.image = UIImage(data: dataPicture!)
+        //profilePicture.contentMode = .ScaleToFill
         profilePicture.layer.cornerRadius = 77
         profilePicture.layer.masksToBounds = true
         tableViewHeader.addSubview(profilePicture)
         
         let userName = UILabel(frame: CGRect(x: 50, y: tableViewHeader.frame.size.height/2 + profilePicture.frame.size.height/2 + 10, width: tableViewHeader.frame.size.width - 100, height: 40))
-        userName.text = "User Name"
+        userName.text = defaults.objectForKey("user_name") as! String!
         userName.font = UIFont(name: "HelveticaNeue-Light", size: 16)
         userName.textAlignment = .Center
         tableViewHeader.addSubview(userName)
