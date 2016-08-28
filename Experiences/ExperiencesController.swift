@@ -12,11 +12,20 @@ import expanding_collection
 class ExperiencesController: ExpandingViewController {
     
     private var cellsIsOpen = [Bool]()
-    var items: [Experience]!
+    var items: [Experience]! {
+        didSet{
+            collectionView?.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
-        items = [Experience(id: 0, name: "Vive Monterrey", description: "Lorem", price: 1200.00, place: "Monterrey", imageURL: "http://www.cronosport.com.mx/site/wp-content/uploads/2011/11/parque-fundidora-en-monterrey.jpg",time: "Medio día")]
         
+        items = [
+            Experience(id: 0, name: "Parque Fundidora", description: "Lorem", price: 1200.00, place: "Monterrey", image: "genericCover",time: "Medio día"),
+        Experience(id: 0, name: "MacroPlaza", description: "Lorem", price: 1200.00, place: "Monterrey", image: "genericCover2",time: "Medio día"),
+        Experience(id: 0, name: "Paseo Santa Lucia", description: "Lorem", price: 1200.00, place: "Monterrey", image:  "genericCover3",time: "Medio día"),
+        Experience(id: 0, name: "La Huasteca", description: "Lorem", price: 1200.00, place: "Monterrey", image:  "genericCover4",time: "Medio día"),
+        Experience(id: 0, name: "Estadio", description: "Lorem", price: 1200.00, place: "Monterrey", image:  "genericCover5",time: "Medio día")]
         
         itemSize = CGSize(width: 350, height: 400)
         super.viewDidLoad()

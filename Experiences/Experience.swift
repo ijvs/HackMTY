@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Experience {
     
@@ -18,23 +19,18 @@ class Experience {
     var time = String()
     
     
-    var imageURL = String() {
-        didSet{
-            if !imageURL.isEmpty {
-                
-            }
-        }
-    }
+
     var image = UIImage()
     
     
-    required init(id:Int, name: String, description:String, price:Double, place:String, imageURL:String,time:String) {
+    required init(id:Int, name: String, description:String, price:Double, place:String, image:String,time:String) {
         self.id = id
         self.name = name
         self.description = description
         self.price = price
         self.place = place
-        self.imageURL = imageURL
+        self.image = UIImage(named: image)!
+        self.time = time
     }
     
 }

@@ -18,14 +18,18 @@ class ExperienceCollectionCell: BasePageCollectionCell {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     
+    var experience:Experience!
     
     func setCell(e:Experience)  {
         bgImage.image = e.image
-        priceLabel.text = String("$ \(e.price)")
+        priceLabel.text = String("$ \(e.price)0")
         backTitleLabel.text = e.name
         durationLabel.text = e.time
-        
     }
     
-    
+    func updateImage() {
+        UIView.animateWithDuration(1, animations: {
+            self.bgImage.image = self.experience.image
+        })
+    }
 }
