@@ -32,15 +32,21 @@
                                     <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nvi-mP-I0Z"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhb-uf-5x8">
-                                <rect key="frame" x="20" y="289" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zav-bM-jKh">
                                 <rect key="frame" x="290" y="219" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhb-uf-5x8">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experiences" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAl-Y8-MuF">
+                                <rect key="frame" x="20" y="60" width="560" height="67"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBoldItalic" family="Avenir Next" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -49,8 +55,12 @@
                             <constraint firstItem="Xhb-uf-5x8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8sR-9h-VL8"/>
                             <constraint firstItem="Xhb-uf-5x8" firstAttribute="top" secondItem="zav-bM-jKh" secondAttribute="bottom" constant="50" id="DdV-Gx-Vhe"/>
                             <constraint firstItem="SKc-0F-QIt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="52" id="L5a-Kc-U5M"/>
+                            <constraint firstItem="FAl-Y8-MuF" firstAttribute="leading" secondItem="Xhb-uf-5x8" secondAttribute="leading" id="N67-Pj-xmS"/>
                             <constraint firstItem="Xhb-uf-5x8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RPx-Pe-CoX"/>
                             <constraint firstItem="SKc-0F-QIt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SdJ-K5-xWr"/>
+                            <constraint firstItem="FAl-Y8-MuF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="WLT-RT-Bk9"/>
+                            <constraint firstItem="FAl-Y8-MuF" firstAttribute="trailing" secondItem="Xhb-uf-5x8" secondAttribute="trailing" id="bA3-4Y-FZo"/>
+                            <constraint firstItem="zav-bM-jKh" firstAttribute="top" secondItem="FAl-Y8-MuF" secondAttribute="bottom" constant="92" id="v1u-CV-Ayq"/>
                             <constraint firstItem="Xhb-uf-5x8" firstAttribute="centerX" secondItem="SKc-0F-QIt" secondAttribute="centerX" id="y0m-YP-c2Y"/>
                         </constraints>
                     </view>

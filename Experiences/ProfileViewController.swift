@@ -51,7 +51,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let userName = UILabel(frame: CGRect(x: 50, y: tableViewHeader.frame.size.height/2 + profilePicture.frame.size.height/2 + 10, width: tableViewHeader.frame.size.width - 100, height: 40))
         userName.text = defaults.objectForKey("user_name") as! String!
         userName.font = UIFont(name: "HelveticaNeue", size: 16)
-        userName.textColor = UIColor.whiteColor()
+        //userName.textColor = UIColor.whiteColor()
         userName.textAlignment = .Center
         tableViewHeader.addSubview(userName)
         
@@ -84,7 +84,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "reuse")
         cell.textLabel?.text = arrayProfile[indexPath.row]
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        //cell.textLabel?.textColor = UIColor.whiteColor()
         cell.imageView?.image = UIImage(named: arrayImages[indexPath.row])
         if indexPath.row != 0{
             cell.accessoryType = .DisclosureIndicator
