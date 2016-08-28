@@ -64,5 +64,42 @@
             </objects>
             <point key="canvasLocation" x="752" y="-294"/>
         </scene>
+        <!--Experiences Controller-->
+        <scene sceneID="S1W-08-Ks3">
+            <objects>
+                <viewController storyboardIdentifier="ExperiencesController" id="doy-MY-Rc5" customClass="ExperiencesController" customModule="Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ilk-fw-xdv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Epl-XX-y9s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CBU-W3-Al7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Nh-AW-UeI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JkA-bh-X1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="315"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jIT-lB-o3h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cFT-iN-Gdu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7R6-Z8-B7H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="doy-MY-Rc5" kind="relationship" relationship="rootViewController" id="KOU-ck-2zz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yA0-96-7Mm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="315"/>
+        </scene>
     </scenes>
 </document>
