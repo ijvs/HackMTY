@@ -84,16 +84,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Experiences/Alamofire.framework"
   install_framework "Pods-Experiences/Bolts.framework"
   install_framework "Pods-Experiences/FBSDKCoreKit.framework"
   install_framework "Pods-Experiences/FBSDKLoginKit.framework"
   install_framework "Pods-Experiences/FBSDKShareKit.framework"
+  install_framework "Pods-Experiences/ObjectMapper.framework"
   install_framework "Pods-Experiences/expanding_collection.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Experiences/Alamofire.framework"
   install_framework "Pods-Experiences/Bolts.framework"
   install_framework "Pods-Experiences/FBSDKCoreKit.framework"
   install_framework "Pods-Experiences/FBSDKLoginKit.framework"
   install_framework "Pods-Experiences/FBSDKShareKit.framework"
+  install_framework "Pods-Experiences/ObjectMapper.framework"
   install_framework "Pods-Experiences/expanding_collection.framework"
 fi

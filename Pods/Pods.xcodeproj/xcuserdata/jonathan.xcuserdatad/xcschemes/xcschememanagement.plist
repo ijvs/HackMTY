@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Experiences.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C4F6AFEC3E229B1833F5637B65168DA</key>
+		<key>2CE410391197D3C0E14ABE9BDF58D9FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>886C73F1408573C5A056EEDC90A14545</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C31A540DD6DB56404A28511F9FCEB0D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
