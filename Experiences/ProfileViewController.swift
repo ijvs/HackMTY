@@ -13,21 +13,30 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     var tableViewProfile: UITableView!
     
     let arrayProfile = ["Teléfono", "Historial", "Amigos", "Compartir"]
-    let arrayImages = ["phone.png", "history.png", "friends.png", "share.png"]
+    let arrayImages = ["phone.png", "history.png", "friends.png", "shareLove.png"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Blurs
+        let blurEffect = UIBlurEffect(style: .Light)
+        let visualView = UIVisualEffectView(effect: blurEffect)
+        visualView.frame = self.view.bounds
+        self.view.insertSubview(visualView, atIndex: 0)
+        self.view.backgroundColor = UIColor.clearColor()
+        
         //Table view setup
         self.tableViewProfile = UITableView(frame: self.view.bounds, style: .Plain)
         self.tableViewProfile.delegate = self
         self.tableViewProfile.dataSource = self
+        self.tableViewProfile.backgroundColor = UIColor.clearColor()
         
         //Defaults
         let defaults = NSUserDefaults.standardUserDefaults()
         
         //Table view header
         let tableViewHeader = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/2))
+        tableViewHeader.backgroundColor = UIColor.clearColor()
         self.tableViewProfile.tableHeaderView = tableViewHeader
         
         let profilePicture = UIImageView(frame: CGRect(x: tableViewHeader.frame.width/2 - 75, y: tableViewHeader.frame.size.height/2 - 75, width: 150, height: 150))
@@ -41,7 +50,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let userName = UILabel(frame: CGRect(x: 50, y: tableViewHeader.frame.size.height/2 + profilePicture.frame.size.height/2 + 10, width: tableViewHeader.frame.size.width - 100, height: 40))
         userName.text = defaults.objectForKey("user_name") as! String!
-        userName.font = UIFont(name: "HelveticaNeue-Light", size: 16)
+        userName.font = UIFont(name: "HelveticaNeue", size: 16)
+        userName.textColor = UIColor.whiteColor()
         userName.textAlignment = .Center
         tableViewHeader.addSubview(userName)
         
@@ -58,8 +68,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "reuse")
         cell.textLabel?.text = arrayProfile[indexPath.row]
+        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.imageView?.image = UIImage(named: arrayImages[indexPath.row])
         cell.accessoryType = .DisclosureIndicator
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
     

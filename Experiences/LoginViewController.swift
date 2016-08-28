@@ -57,6 +57,9 @@ class LoginViewController: UIViewController
                         defaults.setObject(name, forKey: "user_name")
                         defaults.setObject(urlPicture, forKey: "user_urlPicture")
                         defaults.synchronize()
+                        
+                        let mainView = self.storyboard?.instantiateViewControllerWithIdentifier("mainView")
+                        self.presentViewController(mainView!, animated: true, completion: nil)
                     }
                 })
             }

@@ -20,6 +20,10 @@ class ExperiencesController: ExpandingViewController {
     
     override func viewDidLoad() {
         
+        self.navigationItem.title = "Experiences"
+        let profileButton = UIBarButtonItem(image: UIImage(named: "myProfile.png"), style: .Bordered, target: self, action: #selector(myProfile))
+        self.navigationItem.rightBarButtonItem = profileButton
+        
         items = [
             Experience(id: 0, name: "Parque Fundidora", description: "Lorem", price: 1200.00, place: "Monterrey", image: "genericCover",time: "Medio día"),
         Experience(id: 0, name: "MacroPlaza", description: "Lorem", price: 1200.00, place: "Monterrey", image: "genericCover2",time: "Medio día"),
@@ -31,6 +35,13 @@ class ExperiencesController: ExpandingViewController {
         super.viewDidLoad()
         let nib = UINib(nibName: "ExperienceCollectionCell", bundle: nil)
         collectionView?.registerNib(nib, forCellWithReuseIdentifier: "ExperienceCell")
+    }
+    
+    func myProfile()
+    {
+        let profileView = self.storyboard?.instantiateViewControllerWithIdentifier("profileView") as! ProfileViewController!
+        profileView?.modalPresentationStyle = .OverFullScreen
+        self.presentViewController(profileView, animated: true, completion: nil)
     }
     
     
