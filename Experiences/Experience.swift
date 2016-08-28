@@ -9,13 +9,18 @@
 import Foundation
 import Alamofire
 
+struct Place {
+    var lat = Double()
+    var long = Double()
+}
+
 class Experience {
     
     var id = Int()
     var name = String()
     var description = String()
     var price = Double()
-    var place = String()
+    var place = Place()
     var time = String()
     
     
@@ -23,7 +28,7 @@ class Experience {
     var image = UIImage()
     
     
-    required init(id:Int, name: String, description:String, price:Double, place:String, image:String,time:String) {
+    required init(id:Int, name: String, description:String, price:Double, place:Place, image:String,time:String) {
         self.id = id
         self.name = name
         self.description = description

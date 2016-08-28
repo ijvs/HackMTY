@@ -18,10 +18,14 @@ class MapCell: UITableViewCell, MKMapViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         map.delegate = self
+        //map.setCenterCoordinate(CLLocationCoordinate2D(latitude:25.649025,longitude: -100.2898353 ), animated: true)
+        
     }
 
-    func setCell(time:String) {
-        timeLabel.text = ""
+    func setCell(e:Experience) {
+        timeLabel.text = e.time
+        var camera = MKMapCamera(lookingAtCenterCoordinate: CLLocationCoordinate2D(latitude: e.place.lat,longitude: e.place.long ), fromDistance: 600, pitch: 0, heading: 0)
+        map.setCamera(camera, animated: false)
     }
 
 }

@@ -14,7 +14,7 @@ import PassKit
 class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAuthorizationViewControllerDelegate {
 
     private var scrollOffsetY: CGFloat = 0
-    
+    var e:Experience!
     
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAutho
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return 4
     }
 
     
@@ -33,15 +33,20 @@ class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAutho
         switch indexPath.row {
         case 0:
         let cell = tableView.dequeueReusableCellWithIdentifier("MapCell", forIndexPath: indexPath) as! MapCell
-            cell.setCell("Algo")
+            cell.setCell(e)
             cell.userInteractionEnabled = false
             return cell
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("DescriptionCell", forIndexPath: indexPath) as! DescriptionCell
-            cell.setCell("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta nisl tellus, in fringilla velit rhoncus eget. Donec pulvinar neque quam, a feugiat lectus dictum quis. Proin dignissim justo sit amet ligula viverra, euismod euismod erat elementum. Morbi bibendum eros sit amet ligula consequat convallis. Nam at turpis ac tellus vulputate faucibus. Donec vel velit accumsan erat malesuada laoreet in ac est. Pellentesque et orci egestas urna interdum posuere. Etiam eget sapien nec purus facilisis interdum ornare ac odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer volutpat lectus in urna fringilla blandit.")
+            cell.setCell(e.description)
             cell.userInteractionEnabled = false
             return cell
-            
+        case 2:
+            let cell = tableView.dequeueReusableCellWithIdentifier("PriceCell", forIndexPath: indexPath)
+            var lb = cell.viewWithTag(11) as! UILabel
+            lb.text = "$ \(e.price)0"
+            cell.userInteractionEnabled = false
+            return cell
         default:
             let cell = tableView.dequeueReusableCellWithIdentifier("PayCell", forIndexPath: indexPath)
             return cell
@@ -54,7 +59,9 @@ class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAutho
         case 0:
             return 150;
         case 1:
-            return 350
+            return 440
+        case 2:
+            return 50
         default:
             return 100
             
@@ -67,7 +74,7 @@ class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAutho
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 2 {
+        if indexPath.row == 3 {
             let paymentRequest = PKPaymentRequest()
             paymentRequest.currencyCode = "USD"
             paymentRequest.countryCode = "US"
@@ -75,7 +82,7 @@ class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAutho
             paymentRequest.supportedNetworks = [PKPaymentNetworkAmex,PKPaymentNetworkVisa, PKPaymentNetworkMasterCard]
             paymentRequest.merchantCapabilities = .Capability3DS
             paymentRequest.requiredShippingAddressFields = .None
-            paymentRequest.paymentSummaryItems = [PKPaymentSummaryItem(label: "Experiencia", amount: 1200.00)]
+            paymentRequest.paymentSummaryItems = [PKPaymentSummaryItem(label: "Experiencia", amount: NSDecimalNumber(double: e.price))]
             var payController = PKPaymentAuthorizationViewController(paymentRequest: paymentRequest)
             print(payController.description)
             
