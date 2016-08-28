@@ -8,19 +8,18 @@
 
 import UIKit
 import expanding_collection
+import PassKit
 
-class ExperineceTableViewController: ExpandingTableViewController {
+
+class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAuthorizationViewControllerDelegate {
 
     private var scrollOffsetY: CGFloat = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -66,6 +65,33 @@ class ExperineceTableViewController: ExpandingTableViewController {
         popTransitionAnimation()
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 2 {
+            let paymentRequest = PKPaymentRequest()
+            paymentRequest.currencyCode = "USD"
+            paymentRequest.countryCode = "US"
+            paymentRequest.merchantIdentifier = "merchant.space.siker.testpay"
+            paymentRequest.merchantCapabilities = .Capability3DS
+            paymentRequest.requiredShippingAddressFields = .None
+            paymentRequest.paymentSummaryItems = [PKPaymentSummaryItem(label: "Experiencia", amount: 1200.00)]
+            var payController = PKPaymentAuthorizationViewController(paymentRequest: paymentRequest)
+            payController.delegate = self
+            self.presentViewController(payController, animated: true, completion: nil)
+        }
+    }
     
+}
+
+
+extension ExpandingTableViewController {
+    public func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController, didSelectPaymentMethod paymentMethod: PKPaymentMethod, completion: ([PKPaymentSummaryItem]) -> Void) {
+        
+    }
+    public func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController) {
+    }
+    
+    public func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: (PKPaymentAuthorizationStatus) -> Void) {
+        
+    }
     
 }
