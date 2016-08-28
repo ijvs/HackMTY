@@ -21,7 +21,7 @@ class MapCell: UITableViewCell, MKMapViewDelegate {
     }
 
     func setCell(time:String) {
-        timeLabel.text = time
+        timeLabel.text = ""
     }
 
 }

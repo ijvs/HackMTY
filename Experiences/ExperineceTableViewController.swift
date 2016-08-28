@@ -19,6 +19,7 @@ class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAutho
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,10 +78,14 @@ class ExperineceTableViewController: ExpandingTableViewController,PKPaymentAutho
             paymentRequest.paymentSummaryItems = [PKPaymentSummaryItem(label: "Experiencia", amount: 1200.00)]
             var payController = PKPaymentAuthorizationViewController(paymentRequest: paymentRequest)
             print(payController.description)
-            payController.delegate = self
-            self.presentViewController(payController, animated: true, completion: nil)
+            
+            if PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks([PKPaymentNetworkAmex,PKPaymentNetworkVisa, PKPaymentNetworkMasterCard]) {
+                payController.delegate = self
+                self.presentViewController(payController, animated: true, completion: nil)
+            }
         }
     }
+    
     
 }
 
@@ -90,10 +95,12 @@ extension ExpandingTableViewController {
         
     }
     public func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
     public func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, completion: (PKPaymentAuthorizationStatus) -> Void) {
         
     }
+    
     
 }
