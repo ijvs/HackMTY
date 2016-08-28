@@ -37,7 +37,7 @@ class LoginViewController: UIViewController
     {
         FBSDKLoginManager().logInWithReadPermissions(["public_profile", "email", "user_friends"], fromViewController: self) { (result, error) in
             
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, email, name"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, email, name, picture"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 print(result)
             })
         }
