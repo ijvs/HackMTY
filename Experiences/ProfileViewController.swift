@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 {
     var tableViewProfile: UITableView!
     
-    let arrayProfile = ["Teléfono", "Historial", "Amigos", "Compartir"]
+    let arrayProfile = ["Teléfono: +52 55 40983324", "Historial", "Amigos", "Compartir"]
     let arrayImages = ["phone.png", "history.png", "friends.png", "shareLove.png"]
 
     override func viewDidLoad() {
@@ -86,7 +86,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.text = arrayProfile[indexPath.row]
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.imageView?.image = UIImage(named: arrayImages[indexPath.row])
-        cell.accessoryType = .DisclosureIndicator
+        if indexPath.row != 0{
+            cell.accessoryType = .DisclosureIndicator
+        }
         cell.backgroundColor = UIColor.clearColor()
         return cell
     }
