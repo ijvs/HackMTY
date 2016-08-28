@@ -51,8 +51,11 @@ class ExperiencesController: ExpandingViewController {
     func myProfile()
     {
         let profileView = self.storyboard?.instantiateViewControllerWithIdentifier("profileView") as! ProfileViewController!
-        profileView?.modalPresentationStyle = .OverFullScreen
-        self.presentViewController(profileView, animated: true, completion: nil)
+        //profileView?.modalPresentationStyle = .OverFullScreen
+        let nv = UINavigationController(rootViewController: profileView)
+        nv.modalPresentationStyle = .OverFullScreen
+        nv.view.backgroundColor = UIColor.clearColor()
+        self.presentViewController(nv, animated: true, completion: nil)
     }
     
     override func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
