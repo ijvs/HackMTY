@@ -82,14 +82,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="genericCover" translatesAutoresizingMaskIntoConstraints="NO" id="8S2-2S-XOX">
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09B-rF-Z1M">
+                                <rect key="frame" x="10" y="35" width="330" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8S2-2S-XOX" firstAttribute="top" secondItem="Igw-3I-Gwz" secondAttribute="top" id="1fY-MH-hLU"/>
                             <constraint firstAttribute="trailing" secondItem="8S2-2S-XOX" secondAttribute="trailing" id="7o9-QF-UnN"/>
+                            <constraint firstItem="09B-rF-Z1M" firstAttribute="top" secondItem="Igw-3I-Gwz" secondAttribute="top" constant="35" id="AhP-XZ-lHW"/>
+                            <constraint firstItem="09B-rF-Z1M" firstAttribute="leading" secondItem="Igw-3I-Gwz" secondAttribute="leading" constant="10" id="Rsu-Xy-yQu"/>
                             <constraint firstItem="8S2-2S-XOX" firstAttribute="leading" secondItem="Igw-3I-Gwz" secondAttribute="leading" id="Y49-Q0-Pqz"/>
                             <constraint firstAttribute="bottom" secondItem="8S2-2S-XOX" secondAttribute="bottom" id="YtC-4K-eao"/>
                             <constraint firstAttribute="width" constant="350" id="mp2-SU-shw"/>
+                            <constraint firstAttribute="trailing" secondItem="09B-rF-Z1M" secondAttribute="trailing" constant="10" id="qVm-pQ-GAa"/>
                             <constraint firstAttribute="height" constant="400" id="vif-3L-bm4"/>
                         </constraints>
                     </view>
@@ -111,6 +120,7 @@
                 <outlet property="durationLabel" destination="I9e-3o-0qZ" id="MGb-23-1kh"/>
                 <outlet property="frontConstraintY" destination="axm-hy-QdK" id="eKE-mK-jcC"/>
                 <outlet property="frontContainerView" destination="Igw-3I-Gwz" id="kzW-al-G6k"/>
+                <outlet property="frontTitle" destination="09B-rF-Z1M" id="8Kt-Jk-wqh"/>
                 <outlet property="priceLabel" destination="YOO-RN-G5O" id="NpI-Oc-hiY"/>
                 <outlet property="shareButton" destination="HsC-z8-voW" id="4uV-AZ-mDu"/>
             </connections>
