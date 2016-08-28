@@ -13,13 +13,19 @@ class ExperienceCollectionCell: BasePageCollectionCell {
     
     
     @IBOutlet weak var bgImage: UIImageView!
-    @IBOutlet weak var frontTitleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var backTitleLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     
     
+    func setCell(e:Experience)  {
+        bgImage.image = e.image
+        priceLabel.text = String("$ \(e.price)")
+        backTitleLabel.text = e.name
+        durationLabel.text = e.time
+        
+    }
     
     
 }

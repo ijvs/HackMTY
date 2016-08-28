@@ -15,6 +15,8 @@ class Experience {
     var description = String()
     var price = Double()
     var place = String()
+    var time = String()
+    
     
     var imageURL = String() {
         didSet{
@@ -26,7 +28,7 @@ class Experience {
     var image = UIImage()
     
     
-    required init(id:Int, name: String, description:String, price:Double, place:String, imageURL:String) {
+    required init(id:Int, name: String, description:String, price:Double, place:String, imageURL:String,time:String) {
         self.id = id
         self.name = name
         self.description = description
