@@ -14,6 +14,12 @@
 		07925A531D724CA500C951B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07925A511D724CA500C951B3 /* LaunchScreen.storyboard */; };
 		07925A5E1D724CA500C951B3 /* ExperiencesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07925A5D1D724CA500C951B3 /* ExperiencesTests.swift */; };
 		07925A691D724CA500C951B3 /* ExperiencesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07925A681D724CA500C951B3 /* ExperiencesUITests.swift */; };
+		079744941D7289E500B66641 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079744931D7289E500B66641 /* ProfileViewController.swift */; };
+		0797449A1D728DEC00B66641 /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 079744961D728DEC00B66641 /* history@2x.png */; };
+		0797449B1D728DEC00B66641 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 079744971D728DEC00B66641 /* share@2x.png */; };
+		0797449C1D728DEC00B66641 /* phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 079744981D728DEC00B66641 /* phone@2x.png */; };
+		0797449D1D728DEC00B66641 /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 079744991D728DEC00B66641 /* friends@2x.png */; };
+		0797449F1D72927500B66641 /* profile.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 0797449E1D72927500B66641 /* profile.JPG */; };
 		2DBE582EEE821F070E4776E1 /* libPods-ExperiencesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4CAD526724F8964D0A0F55 /* libPods-ExperiencesTests.a */; };
 		77F0EDC5F9FDD0F1186B7C8A /* libPods-ExperiencesUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCF0247D423FE596AB2EB38 /* libPods-ExperiencesUITests.a */; };
 		8741A7957364D85FF285829B /* libPods-Experiences.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 941915BA77E4C16CDF94D963 /* libPods-Experiences.a */; };
@@ -51,6 +57,12 @@
 		07925A681D724CA500C951B3 /* ExperiencesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencesUITests.swift; sourceTree = "<group>"; };
 		07925A6A1D724CA500C951B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		079744901D72581A00B66641 /* Experiences-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Experiences-Bridging-Header.h"; sourceTree = "<group>"; };
+		079744931D7289E500B66641 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		079744961D728DEC00B66641 /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
+		079744971D728DEC00B66641 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		079744981D728DEC00B66641 /* phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone@2x.png"; sourceTree = "<group>"; };
+		079744991D728DEC00B66641 /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2x.png"; sourceTree = "<group>"; };
+		0797449E1D72927500B66641 /* profile.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.JPG; sourceTree = "<group>"; };
 		43C308ABECAE675921263FE0 /* Pods-Experiences.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Experiences.release.xcconfig"; path = "Pods/Target Support Files/Pods-Experiences/Pods-Experiences.release.xcconfig"; sourceTree = "<group>"; };
 		84A34381B7F68A4417252074 /* Pods-Experiences.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Experiences.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Experiences/Pods-Experiences.debug.xcconfig"; sourceTree = "<group>"; };
 		8D4CAD526724F8964D0A0F55 /* libPods-ExperiencesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExperiencesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +130,7 @@
 				07925A481D724CA500C951B3 /* AppDelegate.swift */,
 				07925A4C1D724CA500C951B3 /* Main.storyboard */,
 				076A5B741D724E3000AAD5AD /* LoginViewController.swift */,
+				079744951D728CF800B66641 /* Profile */,
 				07925A4F1D724CA500C951B3 /* Assets.xcassets */,
 				07925A511D724CA500C951B3 /* LaunchScreen.storyboard */,
 				07925A541D724CA500C951B3 /* Info.plist */,
@@ -142,6 +155,19 @@
 				07925A6A1D724CA500C951B3 /* Info.plist */,
 			);
 			path = ExperiencesUITests;
+			sourceTree = "<group>";
+		};
+		079744951D728CF800B66641 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				079744931D7289E500B66641 /* ProfileViewController.swift */,
+				079744961D728DEC00B66641 /* history@2x.png */,
+				079744971D728DEC00B66641 /* share@2x.png */,
+				079744981D728DEC00B66641 /* phone@2x.png */,
+				079744991D728DEC00B66641 /* friends@2x.png */,
+				0797449E1D72927500B66641 /* profile.JPG */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		290B4C201DFCD4D8E36B7E74 /* Pods */ = {
@@ -279,6 +305,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0797449F1D72927500B66641 /* profile.JPG in Resources */,
+				0797449C1D728DEC00B66641 /* phone@2x.png in Resources */,
+				0797449D1D728DEC00B66641 /* friends@2x.png in Resources */,
+				0797449B1D728DEC00B66641 /* share@2x.png in Resources */,
+				0797449A1D728DEC00B66641 /* history@2x.png in Resources */,
 				07925A531D724CA500C951B3 /* LaunchScreen.storyboard in Resources */,
 				07925A501D724CA500C951B3 /* Assets.xcassets in Resources */,
 				07925A4E1D724CA500C951B3 /* Main.storyboard in Resources */,
@@ -429,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079744941D7289E500B66641 /* ProfileViewController.swift in Sources */,
 				076A5B751D724E3000AAD5AD /* LoginViewController.swift in Sources */,
 				07925A491D724CA500C951B3 /* AppDelegate.swift in Sources */,
 			);
