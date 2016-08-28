@@ -46,24 +46,6 @@
             </objects>
             <point key="canvasLocation" x="8" y="293"/>
         </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="RV8-KS-2Zq">
-            <objects>
-                <viewController id="TU0-Rr-Fea" customClass="ProfileViewController" customModule="Experiences" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="X2U-M5-aBo"/>
-                        <viewControllerLayoutGuide type="bottom" id="3NY-he-k2l"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="u1g-1a-2eb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lu4-Gb-qgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="752" y="-294"/>
-        </scene>
         <!--Experiences Controller-->
         <scene sceneID="S1W-08-Ks3">
             <objects>
