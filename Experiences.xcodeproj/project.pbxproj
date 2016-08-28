@@ -23,6 +23,7 @@
 		076E05661D7337BA005E1F5F /* natural@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055D1D7337BA005E1F5F /* natural@2x.png */; };
 		076E05671D7337BA005E1F5F /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055E1D7337BA005E1F5F /* next@2x.png */; };
 		076E05681D7337BA005E1F5F /* train@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E055F1D7337BA005E1F5F /* train@2x.png */; };
+		076E056A1D7342BE005E1F5F /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E05691D7342BE005E1F5F /* FriendsViewController.swift */; };
 		07925A491D724CA500C951B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07925A481D724CA500C951B3 /* AppDelegate.swift */; };
 		07925A4E1D724CA500C951B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07925A4C1D724CA500C951B3 /* Main.storyboard */; };
 		07925A501D724CA500C951B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07925A4F1D724CA500C951B3 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		076E055D1D7337BA005E1F5F /* natural@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "natural@2x.png"; sourceTree = "<group>"; };
 		076E055E1D7337BA005E1F5F /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
 		076E055F1D7337BA005E1F5F /* train@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "train@2x.png"; sourceTree = "<group>"; };
+		076E05691D7342BE005E1F5F /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		07925A451D724CA500C951B3 /* Experiences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experiences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07925A481D724CA500C951B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07925A4D1D724CA500C951B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				079744931D7289E500B66641 /* ProfileViewController.swift */,
+				076E05691D7342BE005E1F5F /* FriendsViewController.swift */,
 				079744961D728DEC00B66641 /* history@2x.png */,
 				079744971D728DEC00B66641 /* shareLove@2x.png */,
 				079744981D728DEC00B66641 /* phone@2x.png */,
@@ -364,7 +367,7 @@
 				TargetAttributes = {
 					07925A441D724CA500C951B3 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = F3VV4SD4LV;
+						DevelopmentTeam = 5Y2A349B5S;
 						SystemCapabilities = {
 							com.apple.OMC = {
 								enabled = 1;
@@ -622,6 +625,7 @@
 				076E05561D733368005E1F5F /* Bubble.swift in Sources */,
 				076E05551D733368005E1F5F /* Colors.swift in Sources */,
 				076A5B751D724E3000AAD5AD /* LoginViewController.swift in Sources */,
+				076E056A1D7342BE005E1F5F /* FriendsViewController.swift in Sources */,
 				AB0244F01D725FE00036F3EC /* ExperiencesController.swift in Sources */,
 				076E05501D732EA2005E1F5F /* HistoryViewController.swift in Sources */,
 				07925A491D724CA500C951B3 /* AppDelegate.swift in Sources */,

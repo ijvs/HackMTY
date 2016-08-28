@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -89,11 +89,45 @@
                     </view>
                     <connections>
                         <segue destination="Y0k-aP-I83" kind="show" identifier="history" id="uM6-0q-5FU"/>
+                        <segue destination="teW-Dq-fak" kind="show" identifier="friends" id="GY3-Uk-X0E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lu4-Gb-qgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="310"/>
+        </scene>
+        <!--Friends View Controller-->
+        <scene sceneID="ljD-Tw-z3H">
+            <objects>
+                <viewController id="teW-Dq-fak" customClass="FriendsViewController" customModule="Experiences" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qcc-YB-AWk"/>
+                        <viewControllerLayoutGuide type="bottom" id="uYh-s1-SMx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P6P-wz-IQL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OOE-Kl-aNw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OOE-Kl-aNw" firstAttribute="bottom" secondItem="uYh-s1-SMx" secondAttribute="top" id="40X-lL-deN"/>
+                            <constraint firstAttribute="trailing" secondItem="OOE-Kl-aNw" secondAttribute="trailing" id="45W-M2-sjj"/>
+                            <constraint firstItem="OOE-Kl-aNw" firstAttribute="top" secondItem="P6P-wz-IQL" secondAttribute="top" id="vHz-0m-406"/>
+                            <constraint firstItem="OOE-Kl-aNw" firstAttribute="leading" secondItem="P6P-wz-IQL" secondAttribute="leading" id="wmU-UZ-4yt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="OOE-Kl-aNw" id="q96-CB-smh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nMQ-TE-IhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="998"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="wOD-kg-1sd">
@@ -163,7 +197,7 @@
                                                 <constraint firstAttribute="width" constant="93" id="Mpl-TQ-19l"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-kI-4xG">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-kI-4xG">
                                             <rect key="frame" x="121" y="7" width="43" height="23"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,7 +253,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ApplePayBTN_64pt__whiteLine_textLogo_" translatesAutoresizingMaskIntoConstraints="NO" id="gYD-wd-N1B">
-                                            <rect key="frame" x="203" y="142.5" width="194" height="64"/>
+                                            <rect key="frame" x="203" y="143" width="194" height="64"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>

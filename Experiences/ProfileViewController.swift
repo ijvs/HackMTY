@@ -102,6 +102,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             case 1:
                 self.performSegueWithIdentifier("history", sender: self)
                 break
+            case 2:
+                self.performSegueWithIdentifier("friends", sender: self)
+                break
             default:
                 break
         }
