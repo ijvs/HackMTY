@@ -17,6 +17,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Mi Perfil"
+        let doneButton = UIBarButtonItem(title: "Done", style: .Done, target: self, action: #selector(doneViews))
+        self.navigationItem.rightBarButtonItem = doneButton
 
         //Blurs
         let blurEffect = UIBlurEffect(style: .Light)
@@ -94,6 +98,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.row{
+            case 1:
+                self.performSegueWithIdentifier("history", sender: self)
+                break
+            default:
+                break
+        }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
