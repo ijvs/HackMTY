@@ -15,8 +15,6 @@ class ExperiencesController: ExpandingViewController {
     var items: [Experience]!
     
     override func viewDidLoad() {
-        
-        items = [Experience(id: 0, name: "Hola", description: "hola", price: 200.00, place: "Algo")]
     }
     
     

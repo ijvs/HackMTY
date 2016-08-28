@@ -18,6 +18,8 @@
 		77F0EDC5F9FDD0F1186B7C8A /* libPods-ExperiencesUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCF0247D423FE596AB2EB38 /* libPods-ExperiencesUITests.a */; };
 		AB0244F01D725FE00036F3EC /* ExperiencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0244EF1D725FE00036F3EC /* ExperiencesController.swift */; };
 		AB0244F21D72616B0036F3EC /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0244F11D72616B0036F3EC /* Experience.swift */; };
+		ABAC862F1D729C52007D8BAE /* ExperienceCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAC862E1D729C52007D8BAE /* ExperienceCollectionCell.xib */; };
+		ABAC86311D729C70007D8BAE /* ExperienceCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC86301D729C70007D8BAE /* ExperienceCollectionCell.swift */; };
 		EFC5C281049EA3AF19271F50 /* Pods_Experiences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377E85D24A530454E002D5FC /* Pods_Experiences.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		8D4CAD526724F8964D0A0F55 /* libPods-ExperiencesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExperiencesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0244EF1D725FE00036F3EC /* ExperiencesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperiencesController.swift; sourceTree = "<group>"; };
 		AB0244F11D72616B0036F3EC /* Experience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
+		ABAC862E1D729C52007D8BAE /* ExperienceCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperienceCollectionCell.xib; sourceTree = "<group>"; };
+		ABAC86301D729C70007D8BAE /* ExperienceCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceCollectionCell.swift; sourceTree = "<group>"; };
 		AC0A2A89A42B7F9241F79C3A /* Pods-ExperiencesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperiencesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExperiencesUITests/Pods-ExperiencesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBCF0247D423FE596AB2EB38 /* libPods-ExperiencesUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExperiencesUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FE2FCB3BFD6BDECC629E8A /* Pods-ExperiencesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperiencesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExperiencesTests/Pods-ExperiencesTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				07925A4C1D724CA500C951B3 /* Main.storyboard */,
 				AB0244EF1D725FE00036F3EC /* ExperiencesController.swift */,
 				076A5B741D724E3000AAD5AD /* LoginViewController.swift */,
+				ABAC862D1D729C39007D8BAE /* Cell */,
 				AB0244F31D7261730036F3EC /* Model */,
 				07925A4F1D724CA500C951B3 /* Assets.xcassets */,
 				07925A511D724CA500C951B3 /* LaunchScreen.storyboard */,
@@ -179,6 +184,15 @@
 				AB0244F11D72616B0036F3EC /* Experience.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		ABAC862D1D729C39007D8BAE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ABAC862E1D729C52007D8BAE /* ExperienceCollectionCell.xib */,
+				ABAC86301D729C70007D8BAE /* ExperienceCollectionCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07925A531D724CA500C951B3 /* LaunchScreen.storyboard in Resources */,
+				ABAC862F1D729C52007D8BAE /* ExperienceCollectionCell.xib in Resources */,
 				07925A501D724CA500C951B3 /* Assets.xcassets in Resources */,
 				07925A4E1D724CA500C951B3 /* Main.storyboard in Resources */,
 			);
@@ -495,6 +510,7 @@
 				AB0244F01D725FE00036F3EC /* ExperiencesController.swift in Sources */,
 				07925A491D724CA500C951B3 /* AppDelegate.swift in Sources */,
 				AB0244F21D72616B0036F3EC /* Experience.swift in Sources */,
+				ABAC86311D729C70007D8BAE /* ExperienceCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
