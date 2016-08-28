@@ -60,6 +60,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.text = arrayProfile[indexPath.row]
         cell.imageView?.image = UIImage(named: arrayImages[indexPath.row])
         cell.accessoryType = .DisclosureIndicator
+        cell.backgroundColor = UIColor.grayColor()
         return cell
     }
     
