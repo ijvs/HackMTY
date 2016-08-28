@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		076A5B751D724E3000AAD5AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A5B741D724E3000AAD5AD /* LoginViewController.swift */; };
 		076E054B1D72C09B005E1F5F /* myProfile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E054A1D72C09B005E1F5F /* myProfile@2x.png */; };
+		076E054D1D73294F005E1F5F /* Travelers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 076E054C1D73294E005E1F5F /* Travelers.jpg */; };
 		07925A491D724CA500C951B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07925A481D724CA500C951B3 /* AppDelegate.swift */; };
 		07925A4E1D724CA500C951B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07925A4C1D724CA500C951B3 /* Main.storyboard */; };
 		07925A501D724CA500C951B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07925A4F1D724CA500C951B3 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		076A5B741D724E3000AAD5AD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		076E054A1D72C09B005E1F5F /* myProfile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myProfile@2x.png"; sourceTree = "<group>"; };
+		076E054C1D73294E005E1F5F /* Travelers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Travelers.jpg; sourceTree = "<group>"; };
 		07925A451D724CA500C951B3 /* Experiences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experiences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07925A481D724CA500C951B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07925A4D1D724CA500C951B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				ABA0063A1D72C971003AE8BB /* ExperineceTableViewController.swift */,
 				076E054A1D72C09B005E1F5F /* myProfile@2x.png */,
 				076A5B741D724E3000AAD5AD /* LoginViewController.swift */,
+				076E054C1D73294E005E1F5F /* Travelers.jpg */,
 				079744951D728CF800B66641 /* Profile */,
 				ABAC862D1D729C39007D8BAE /* Cell */,
 				AB0244F31D7261730036F3EC /* Model */,
@@ -360,6 +363,7 @@
 				0797449F1D72927500B66641 /* profile.JPG in Resources */,
 				0797449C1D728DEC00B66641 /* phone@2x.png in Resources */,
 				0797449D1D728DEC00B66641 /* friends@2x.png in Resources */,
+				076E054D1D73294F005E1F5F /* Travelers.jpg in Resources */,
 				0797449B1D728DEC00B66641 /* shareLove@2x.png in Resources */,
 				0797449A1D728DEC00B66641 /* history@2x.png in Resources */,
 				07925A531D724CA500C951B3 /* LaunchScreen.storyboard in Resources */,

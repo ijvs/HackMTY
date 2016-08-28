@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 {
     var tableViewProfile: UITableView!
     
-    let arrayProfile = ["Teléfono", "Historial", "Amigos", "Compartir"]
+    let arrayProfile = ["Teléfono: +52 55 40983324", "Historial", "Amigos", "Compartir"]
     let arrayImages = ["phone.png", "history.png", "friends.png", "shareLove.png"]
 
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let userName = UILabel(frame: CGRect(x: 50, y: tableViewHeader.frame.size.height/2 + profilePicture.frame.size.height/2 + 10, width: tableViewHeader.frame.size.width - 100, height: 40))
         userName.text = defaults.objectForKey("user_name") as! String!
         userName.font = UIFont(name: "HelveticaNeue", size: 16)
-        userName.textColor = UIColor.whiteColor()
+        //userName.textColor = UIColor.whiteColor()
         userName.textAlignment = .Center
         tableViewHeader.addSubview(userName)
         
@@ -84,9 +84,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "reuse")
         cell.textLabel?.text = arrayProfile[indexPath.row]
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        //cell.textLabel?.textColor = UIColor.whiteColor()
         cell.imageView?.image = UIImage(named: arrayImages[indexPath.row])
-        cell.accessoryType = .DisclosureIndicator
+        if indexPath.row != 0{
+            cell.accessoryType = .DisclosureIndicator
+        }
         cell.backgroundColor = UIColor.clearColor()
         return cell
     }

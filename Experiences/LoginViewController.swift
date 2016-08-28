@@ -14,6 +14,12 @@ class LoginViewController: UIViewController
 {
 
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var labelLoading: UILabel!
+    
+    var timer: NSTimer!
+    var count = 0
     
     override func viewDidLoad()
     {
@@ -21,15 +27,19 @@ class LoginViewController: UIViewController
         
         self.loginButton.layer.cornerRadius = 7
         
-        /*let login = FBSDKLoginButton()
-        login.delegate = self
-        login.readPermissions = ["public_profile", "email", "user_friends"]
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.color = UIColor.whiteColor()
+        self.activityIndicator.hidden = true
+        self.labelLoading.hidden = true
         
-        login.frame = CGRect(x: self.view.frame.size.width/2 - 100, y: self.view.frame.size.height/2 - 22, width: 200, height: 44)
-        login.layer.cornerRadius = 7
-        login.layer.masksToBounds = true
-        login.center = self.view.center
-        self.view.addSubview(login)*/
+        let imageView = UIImageView(frame: self.view.bounds)
+        imageView.image = UIImage(named: "Travelers.jpg")
+        imageView.contentMode = .ScaleAspectFill
+        self.view.insertSubview(imageView, atIndex: 0)
+        let darkView = UIView(frame: imageView.bounds)
+        darkView.backgroundColor = UIColor.blackColor()
+        darkView.alpha = 0.3
+        imageView.addSubview(darkView)
     }
     
 
@@ -58,11 +68,45 @@ class LoginViewController: UIViewController
                         defaults.setObject(urlPicture, forKey: "user_urlPicture")
                         defaults.synchronize()
                         
-                        let mainView = self.storyboard?.instantiateViewControllerWithIdentifier("mainView")
-                        self.presentViewController(mainView!, animated: true, completion: nil)
+                        self.labelLoading.hidden = false
+                        self.activityIndicator.hidden = false
+                        //self.timer = NSTimer(timeInterval: 1.0, target: self, selector: #selector(self.requestLogin), userInfo: [], repeats: true)
+                        self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(self.requestLogin), userInfo: [], repeats: true)
+                        self.timer.fire()
+                        
+                        //let mainView = self.storyboard?.instantiateViewControllerWithIdentifier("mainView")
+                        //self.presentViewController(mainView!, animated: true, completion: nil)
                     }
                 })
             }
+        }
+    }
+    
+    func requestLogin()
+    {
+        count = count + 1
+        switch count{
+        case 1:
+            labelLoading.text = "Loading user data..."
+            break
+        case 2:
+            labelLoading.text = "Locating you..."
+            break
+        case 3:
+            labelLoading.text = "Loading experiences nearby..."
+            break
+        case 4:
+            labelLoading.text = "Done!"
+            break
+        default:
+            break
+        }
+        
+        if count == 5{
+            count = 0
+            self.timer.invalidate()
+            let mainView = self.storyboard?.instantiateViewControllerWithIdentifier("mainView")
+            self.presentViewController(mainView!, animated: true, completion: nil)
         }
     }
 
