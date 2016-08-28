@@ -65,8 +65,18 @@ extension ExperiencesController {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! ExperienceCollectionCell
-        cell.cellIsOpen(!cell.isOpened)
+        
+        if cell.isOpened {
+            let nv = self.storyboard?.instantiateViewControllerWithIdentifier("ExperineceTableViewController") as! ExperineceTableViewController
+            pushToViewController(nv)
+            cell.cellIsOpen(false)
+        }else {
+            cell.cellIsOpen(!cell.isOpened)
+        }
+        
     }
+    
+ 
     
     
 }
